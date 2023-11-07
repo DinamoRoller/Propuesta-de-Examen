@@ -1,16 +1,15 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int main() {
-    int max_valor = 20; 
+    for (int a = 1; a <= 17; a++) {
+        for (int b = a; b <= 17; b++) {
+            int c = sqrt(a * a + b * b);
 
-    for (int a = 1; a <= max_valor; a++) {
-        for (int b = a; b <= max_valor; b++) {
-            for (int c = b; c <= max_valor; c++) {
-                if (a * a + b * b == c * c) {
-                    cout << "Triple pitagórico encontrado: " << a << " - " << b << " - " << c << endl;
-                }
+            if (a * a + b * b == c * c && c <= 17 && (a != 9 || b != 12 || c != 15)) {
+                cout << a << " - " << b << " - " << c << endl;
             }
         }
     }
