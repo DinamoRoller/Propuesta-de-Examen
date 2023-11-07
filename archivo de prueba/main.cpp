@@ -4,12 +4,15 @@
 using namespace std;
 
 int main() {
-    for (int a = 1; a <= 17; a++) {
-        for (int b = a; b <= 17; b++) {
-            int c = sqrt(a * a + b * b);
+    int max_valor = 20; 
 
-            if (a * a + b * b == c * c && c <= 17 && (a != 9 || b != 12 || c != 15)) {
-                cout << a << " - " << b << " - " << c << endl;
+    for (int a = 1; a <= max_valor; a++) {
+        for (int b = a; b <= max_valor; b++) {
+            double c = sqrt(a * a + b * b);
+
+    
+            if (c == static_cast<int>(c) && a + b > c) {
+                cout << "Triple pitagorico: " << a << " - " << b << " - " << static_cast<int>(c) << endl;
             }
         }
     }
